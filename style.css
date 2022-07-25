@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: hsl(220, 15%, 55%);
+  background-color: hsl(210, 46%, 95%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.testimonials {
+  width: 100%;
+  max-width: 948px;
+  margin: auto;
+  padding: 30px;
+}
+
+.container {
+  display: grid;
+  gap: 20px;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+  'one'
+  'two'
+  'three'
+  'four'
+  'five';
+}
+
+.testimonials__item {
+  padding: 14px 28px;
+  border-radius: 5px;
+}
+
+.testimonials__item:nth-child(1) {
+  grid-area: one;
+}
+.testimonials__item:nth-child(2) {
+  grid-area: two;
+}
+.testimonials__item:nth-child(3) {
+  grid-area: three;
+}
+.testimonials__item:nth-child(4) {
+  grid-area: four;
+}
+.testimonials__item:nth-child(5) {
+  grid-area: five;
+}
+
+.one {
+  position: relative;
+  background-color: hsl(263, 55%, 52%);
+  z-index: 10;
+}
+
+.quot {
+  position: absolute;
+  width: 84px;
+  right: 30px;
+  top: 0;
+  z-index: 1;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.two {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.three, .five {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.four {
+  background-color: hsl(219, 29%, 14%);
+}
+
+.one h3, .two h3, .four h3,
+.one h4, .two h4, .four h4,
+.one h5, .two h5, .four h5,
+.one p, .two p, .four p {
+  color: hsl(0, 0%, 81%);
+}
+
+.testimonial__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.photo img {
+  width: 24px;
+  margin-right: 10px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.info {
+  font-size: 10px;
+}
+
+.info h5 {
+  opacity: 0.5;
+}
+
+.testimonial__body h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.testimonial__text {
+  font-size: 10px;
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+.attribution {
+  margin-top: auto;
+  padding: 20px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    grid-template-areas:
+    "one one"
+    "two three"
+    "four four"
+    "five five";
+  }
+
+  .quot {
+    right: 65px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    grid-template-areas:
+    "one one two five"
+    "three four four five";
+  }
+}
